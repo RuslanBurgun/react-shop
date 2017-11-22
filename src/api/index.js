@@ -1,7 +1,7 @@
-import phones from './mockPhones';
+import phones from './mockPhones'
 
-export const fetchPhones = async () =>{
-  return new Promise((resolve, reject)=>{
+export const fetchPhones = async () => {
+  return new Promise((resolve, reject) => {
     resolve(phones);
-  });
-};
+  })
+}
