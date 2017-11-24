@@ -21,9 +21,9 @@ const store = createStore(reducers, composeWithDevTools(
     applyMiddleware(thunk)
 ));
 
-// const cHistory = createBrowserHistory();
+const cHistory = createBrowserHistory();
 
-// const history = syncHistoryWithStore(cHistory, store);
+const history = syncHistoryWithStore(cHistory, store);
 
 ReactDOM.render(
     <Provider store={store}>
