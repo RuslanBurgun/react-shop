@@ -33,6 +33,7 @@ ReactDOM.render(
             <Route path="/phones/:id" component={Phone} />
             <Layout>
               <Route exact path="/" component={Phones} />
+              <Route path="/categories/:id" component={Phones} />
             </Layout>
           </Switch>
         </div>
