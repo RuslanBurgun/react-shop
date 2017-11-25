@@ -9,7 +9,6 @@ import { createBrowserHistory } from 'history'
 
 import reducers from './reducers';
 import { Provider } from "react-redux";
- // import {Router, Route, Link } from "react-router";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Layout from './containers/layout';

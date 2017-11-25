@@ -9,6 +9,7 @@ import {
   FETCH_PHONE_BY_ID_SUCCESS,
   FETCH_PHONE_BY_ID_FAILURE,
   ADD_PHONE_TO_BASKET,
+  SEARCH_PHONE,
   FETCH_CATEGORIES_START,
   FETCH_CATEGORIES_SUCCESS,
   FETCH_CATEGORIES_FAILURE
@@ -86,6 +87,13 @@ export const addPhoneToBasket = id => dispatch => {
         payload: id
       })
 };
+
+export const searchPhone = text => dispatch => {
+     dispatch({
+             type: SEARCH_PHONE,
+            payload: text
+      })
+    };
 
 export const fetchCategories = () => async dispatch => {
     dispatch({type: FETCH_CATEGORIES_START});
