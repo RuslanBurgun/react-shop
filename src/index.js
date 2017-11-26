@@ -1,3 +1,5 @@
+import './main.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -14,6 +16,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Layout from './containers/layout';
 import Phone from './containers/phone';
 import Phones from './containers/phones';
+import Basket from './containers/basket';
 
 
 const store = createStore(reducers, composeWithDevTools(
@@ -30,6 +33,7 @@ ReactDOM.render(
         <div>
           <Switch>
             <Route path="/phones/:id" component={Phone} />
+            <Route path="/basket" component={Basket} />
             <Layout>
               <Route exact path="/" component={Phones} />
               <Route path="/categories/:id" component={Phones} />

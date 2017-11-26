@@ -3,7 +3,6 @@ import * as R from 'ramda';
 export const getPhoneById = (state, id) =>
 {
   return R.prop (id, state.phones)
-
 };
 
 export const getPhones = (state, ownProps) =>{
@@ -51,5 +50,21 @@ export const getActiveCategoryId = ownProps => {
         if(route !== undefined){
              categoryId = route.replace(/\D/g,'');
         }
+
     return categoryId;
+};
+
+export const getBasketPhonesWithCount = state => {
+    const uniqueIds = R.uniq(state.basket);
+    const phoneCount = id => R.compose(
+        R.length,
+        R.filter(basketId => R.equals(id, basketId))
+    )(state.basket);
+    const phoneWithCount = phone => R.assoc ('count', phoneCount(phone.id), phone);
+    const phones =R.compose(
+    R.map(phoneWithCount),
+    R.map(id => getPhoneById(state, id))
+    )(uniqueIds);
+
+    return phones;
 };
