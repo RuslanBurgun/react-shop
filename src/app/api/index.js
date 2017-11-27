@@ -3,7 +3,7 @@ import request from 'superagent';
 
 
 const categoriesUrl = 'http://www.mocky.io/v2/5a1bc7f82e00001b163c14ec';
-const phonesUrl = 'http://www.mocky.io/v2/5a1bc4ef2e000055163c14de';
+const phonesUrl = 'http://www.mocky.io/v2/5a1c1d8e2e00007a2f3c16a8';
 
 export const fetchPhones = async () => {
   const { body } = await request.get(phonesUrl);
