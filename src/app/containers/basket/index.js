@@ -6,7 +6,7 @@ import * as R from 'ramda';
 
 import {getTotalBasketPrice, getBasketPhonesWithCount} from "../../store/selectors/selectors";
 
-import {removePhoneFromBasket, basketCheckout, cleanBasket } from '../../store/actions';
+import {removePhoneFromBasket, basketCheckout, cleanBasket } from '../../store/actions/basket';
 
 
 

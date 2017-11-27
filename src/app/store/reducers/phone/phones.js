@@ -1,7 +1,6 @@
 import * as R from 'ramda';
 import {FETCH_PHONES_SUCCESS, LOAD_MORE_PHONES_SUCCESS} from "../../../constant/actionTypes";
 
-
 const initialState = {};
 
 export default (state = initialState, {type, payload}) => {

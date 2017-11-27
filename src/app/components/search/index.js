@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 import { connect } from 'react-redux';
 
-import { searchPhone } from '../../store/actions';
+import { searchPhone } from '../../store/actions/phone';
 
 class Search extends Component {
 

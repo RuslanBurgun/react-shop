@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import * as R from 'ramda';
 
 
-import { fetchPhones, loadMorePhones, addPhoneToBasket, fetchCategories } from '../../store/actions';
+import { fetchPhones, loadMorePhones} from '../../store/actions/phone';
+import { fetchCategories } from '../../store/actions/category';
+import { addPhoneToBasket } from '../../store/actions/basket';
 import {getPhones} from '../../store/selectors/selectors';
 import { Link } from 'react-router-dom';
 
