@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 
-import { getTotalBasketCount, getTotalBasketPrice } from '../../selectors/selectors';
+import { getTotalBasketCount, getTotalBasketPrice } from '../../store/selectors/selectors';
 
 const BasketCart = ({totalBasketCount, totalPrice}) => (
     <div className="cart">

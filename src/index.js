@@ -9,7 +9,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { createBrowserHistory } from 'history'
 
-import reducers from './app/reducers';
+import reducers from './app/store/reducers';
 import { Provider } from "react-redux";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 

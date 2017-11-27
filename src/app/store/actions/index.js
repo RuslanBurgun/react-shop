@@ -15,7 +15,7 @@ import {
   FETCH_CATEGORIES_FAILURE,
   REMOVE_PHONE_FROM_BASKET,
   CLEAN_BASKET
-} from '../constant/actionTypes'
+} from '../../constant/actionTypes'
 
 import { getRenderedPhonesLength } from '../selectors/selectors';
 
@@ -24,7 +24,7 @@ import {
   loadMorePhones as loadMorePhonesApi,
   fetchPhoneById as fetchPhoneByIdApi,
   fetchCategories as fetchCategoriesApi
-} from '../api'
+} from '../../api/index'
 
 
 export const fetchPhones = () => async dispatch => {

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 import * as R from 'ramda';
 
-import {getTotalBasketPrice, getBasketPhonesWithCount} from "../../selectors/selectors";
+import {getTotalBasketPrice, getBasketPhonesWithCount} from "../../store/selectors/selectors";
 
-import {removePhoneFromBasket, basketCheckout, cleanBasket } from '../../actions';
+import {removePhoneFromBasket, basketCheckout, cleanBasket } from '../../store/actions';
 
 
 

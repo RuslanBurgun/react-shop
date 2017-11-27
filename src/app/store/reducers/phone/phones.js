@@ -1,5 +1,5 @@
 import * as R from 'ramda';
-import {FETCH_PHONES_SUCCESS, LOAD_MORE_PHONES_SUCCESS} from "../../constant/actionTypes";
+import {FETCH_PHONES_SUCCESS, LOAD_MORE_PHONES_SUCCESS} from "../../../constant/actionTypes";
 
 
 const initialState = {};
