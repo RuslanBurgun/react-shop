@@ -15,9 +15,9 @@ import {
   FETCH_CATEGORIES_FAILURE,
   REMOVE_PHONE_FROM_BASKET,
   CLEAN_BASKET
-} from '../actionTypes'
+} from '../constant/actionTypes'
 
-import { getRenderedPhonesLength } from '../selectors';
+import { getRenderedPhonesLength } from '../selectors/selectors';
 
 import {
   fetchPhones as fetchPhonesApi,

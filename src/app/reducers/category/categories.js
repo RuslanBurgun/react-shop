@@ -1,5 +1,5 @@
 import * as R from 'ramda';
-import {FETCH_CATEGORIES_SUCCESS} from "../actionTypes";
+import {FETCH_CATEGORIES_SUCCESS} from "../../constant/actionTypes";
 
 
 const initialState = {};

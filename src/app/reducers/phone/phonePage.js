@@ -1,5 +1,5 @@
 import * as R from 'ramda';
-import {FETCH_PHONE_BY_ID_SUCCESS} from "../actionTypes";
+import {FETCH_PHONE_BY_ID_SUCCESS} from "../../constant/actionTypes";
 
 const initialState = {
   id: null,
