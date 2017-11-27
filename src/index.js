@@ -9,15 +9,15 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { createBrowserHistory } from 'history'
 
-import reducers from './reducers';
+import reducers from './app/reducers';
 import { Provider } from "react-redux";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import Layout from './containers/layout';
-import Phone from './containers/phone';
-import Phones from './containers/phones';
-import Basket from './containers/basket';
-import { loadState, saveState } from './localStorage';
+import Layout from './app/containers/layout';
+import Phone from './app/containers/phone';
+import Phones from './app/containers/phones';
+import Basket from './app/containers/basket';
+import { loadState, saveState } from './app/localStorage';
 
 const persistedState = loadState();
 const store = createStore(reducers,
