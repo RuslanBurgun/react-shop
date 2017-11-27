@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import * as R from 'ramda';
 
 import { fetchPhoneById, addPhoneToBasket } from '../../actions';
-import { getPhoneById } from "../../selectors";
+import { getPhoneById } from "../../selectors/selectors";
 
 import   BasketCart  from '../../components/basketCart';
 

@@ -6,7 +6,7 @@ import { compose } from 'redux';
 import * as R from 'ramda';
 import  classNames  from 'classnames';
 
-import {getCategories, getActiveCategoryId} from '../../selectors';
+import {getCategories, getActiveCategoryId} from '../../selectors/selectors';
 
 const Categories = (props) => {
     const categories = props.categories;

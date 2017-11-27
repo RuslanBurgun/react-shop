@@ -1,6 +1,6 @@
 import * as R from 'ramda';
 
-import { ADD_PHONE_TO_BASKET, REMOVE_PHONE_FROM_BASKET, CLEAN_BASKET } from "../actionTypes";
+import { ADD_PHONE_TO_BASKET, REMOVE_PHONE_FROM_BASKET, CLEAN_BASKET } from "../../constant/actionTypes";
 
 const initialState = [];
 

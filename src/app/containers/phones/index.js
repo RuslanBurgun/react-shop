@@ -4,7 +4,7 @@ import * as R from 'ramda';
 
 
 import { fetchPhones, loadMorePhones, addPhoneToBasket, fetchCategories } from '../../actions';
-import {getPhones} from '../../selectors';
+import {getPhones} from '../../selectors/selectors';
 import { Link } from 'react-router-dom';
 
 class Phones extends Component

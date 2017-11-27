@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import phones from './phones';
-import phonePage from './phonePage';
-import phonesPage from './phonesPage';
-import basket from './basket';
-import categories from './categories';
+import phones from './phone/phones';
+import phonePage from './phone/phonePage';
+import phonesPage from './phone/phonesPage';
+import basket from './basket/basket';
+import categories from './category/categories';
 
 
 export default combineReducers({

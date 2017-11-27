@@ -17,7 +17,7 @@ import Layout from './app/containers/layout';
 import Phone from './app/containers/phone';
 import Phones from './app/containers/phones';
 import Basket from './app/containers/basket';
-import { loadState, saveState } from './app/localStorage';
+import { loadState, saveState } from './app/service/localStorage';
 
 const persistedState = loadState();
 const store = createStore(reducers,
