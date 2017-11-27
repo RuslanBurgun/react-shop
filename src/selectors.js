@@ -2,7 +2,11 @@ import * as R from 'ramda';
 
 export const getPhoneById = (state, id) =>
 {
-  return R.prop (id, state.phones)
+    if(R.isEmpty(state.phones)){
+      return state.phonePage.phone;
+    }
+
+    return R.prop (id, state.phones);
 };
 
 export const getPhones = (state, ownProps) =>{

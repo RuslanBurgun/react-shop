@@ -19,9 +19,10 @@ class Phone extends Component
     this.props.fetchPhoneById(id);
   }
 
-  renderFields () {
+  renderFields= () => {
 
     const { phone } = this.props;
+
     const columnFields = R.compose(
         R.toPairs,
         R.pick([
@@ -45,7 +46,7 @@ class Phone extends Component
           </div>
         </div>
     ))
-  }
+  };
 
 
   renderContent () {
@@ -100,6 +101,7 @@ class Phone extends Component
 
   render () {
     const  { phone } = this.props;
+
     return(
         <div className="vuew-container">
           <div className="container">
