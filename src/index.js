@@ -17,11 +17,18 @@ import Layout from './containers/layout';
 import Phone from './containers/phone';
 import Phones from './containers/phones';
 import Basket from './containers/basket';
+import { loadState, saveState } from './localStorage';
 
-
-const store = createStore(reducers, composeWithDevTools(
+const persistedState = loadState();
+const store = createStore(reducers,
+    persistedState,
+    composeWithDevTools(
     applyMiddleware(thunk)
 ));
+
+store.subscribe(()=>{
+  saveState(store.getState())
+});
 
 const cHistory = createBrowserHistory();
 
