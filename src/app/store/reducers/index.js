@@ -6,6 +6,7 @@ import phonePage from './phone/phonePage';
 import phonesPage from './phone/phonesPage';
 import basket from './basket/basket';
 import categories from './category/categories';
+import notification from './notification';
 
 
 export default combineReducers({
@@ -14,5 +15,6 @@ export default combineReducers({
   phonePage,
   phonesPage,
   basket,
-  categories
+  categories,
+  notification
 });

@@ -537,3 +537,21 @@ footer {
     -ms-transform: translateY(0px);
     transform: translateY(0px);
 }
+
+
+
+/*notification*/
+
+.notification{
+    position:fixed;
+    right: 10px;
+    bottom: 10px;
+    width:200px;
+    text-align:center;
+    background: #cccccc;
+    padding:10px;
+}
+
+.notification.error{
+    background:red;
+}

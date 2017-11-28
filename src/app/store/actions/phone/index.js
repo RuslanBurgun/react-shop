@@ -19,7 +19,6 @@ import {getRenderedPhonesLength} from "../../selectors/selectors";
 
 export const fetchPhones = () => async dispatch => {
     dispatch({type: FETCH_PHONES_START});
-
     try {
         const phones = await fetchPhonesApi();
         dispatch({

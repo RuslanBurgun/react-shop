@@ -72,3 +72,8 @@ export const getBasketPhonesWithCount = state => {
 
     return phones;
 };
+
+
+export const getNotification = state => {
+    return {type:state.notification.type, message:state.notification.err}
+};
