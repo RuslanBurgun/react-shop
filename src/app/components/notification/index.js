@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import * as R from 'ramda';
+
 
 
 import { getNotification } from '../../store/selectors/selectors';
@@ -12,9 +12,6 @@ class Notification extends Component
       isVisible: false
     };
 
-    constructor(props){
-      super(props);
-    }
 
     componentWillUpdate() {
       // if(this.props.notification.type !== undefined){
