@@ -1,4 +1,5 @@
 import './assets/css/main.css';
+import 'react-notifications/lib/notifications.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

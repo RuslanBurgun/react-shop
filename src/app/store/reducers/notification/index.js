@@ -1,8 +1,8 @@
-import { FETCH_PHONES_FAILURE, LOAD_MORE_PHONES_FAILURE, FETCH_PHONE_BY_ID_FAILURE } from "../../../constant/actionTypes";
+import { FETCH_PHONES_FAILURE, LOAD_MORE_PHONES_FAILURE, FETCH_PHONE_BY_ID_FAILURE, CLEAN_NOTIFICATION } from "../../../constant/actionTypes";
 
 
 const initialState = {
-  err:'',
+
 };
 
 export default (state = initialState, {type, payload}) => {
@@ -14,7 +14,8 @@ export default (state = initialState, {type, payload}) => {
         err: payload.message,
         type:'error'
       });
-
+    case CLEAN_NOTIFICATION:
+      return {};
     default:
       return state
   }

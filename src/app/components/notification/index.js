@@ -1,62 +1,74 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
+
+import {ToastContainer, toast} from 'react-toastify';
+
+
+import {getNotification} from '../../store/selectors/selectors';
+import {cleanNotification} from "../../store/actions/notification/index";
+
+
+class Notification extends Component {
+
+  state =
+      {
+        defaultOption: {
+          hideProgressBar: true,
+          position: toast.POSITION.TOP_LEFT,
+
+        }
+      };
+
+
+  isNotificationActive() {
+    return !!this.props.notification.type;
+  }
+
+
+  componentDidUpdate() {
+
+    this.notify();
+  }
 
 
 
-import { getNotification } from '../../store/selectors/selectors';
+  render() {
 
-class Notification extends Component
-{
+    return this.renderContent();
+  }
 
-    state = {
-      isVisible: false
-    };
+  switchType = (type) => {
 
-
-    componentWillUpdate() {
-      // if(this.props.notification.type !== undefined){
-      //   this.setState({isVisible:true},
-      //       ()=>{
-      //         // this.changeState();
-      //       });
-      // }
+    switch (type) {
+      case 'error':
+        return 'error';
+      default:
+        return 'info';
     }
 
-    render () {
-      return this.renderContent();
+  };
+
+
+  notify = () => {
+    if (this.isNotificationActive()) {
+      const type = this.switchType(this.props.notification.type);
+      const {message} = this.props.notification;
+
+       toast[type](message, this.state.defaultOption);
+
+
+       // this.props.cleanNotification();
 
     }
-
-    renderContent () {
-      const { type , message } = this.props.notification;
-      const defaultClass = 'notification';
-      const linkClass = type === `error` ? `${defaultClass}  error` : `${defaultClass} success`;
+  };
 
 
-      if(this.state.isVisible){
-        return (
-            <div className = {linkClass}>
-              <p>
-                {message}
-              </p>
-            </div>
-        )
-      }
-
-      return null;
+  renderContent() {
+    if (this.isNotificationActive()) {
+      return (<ToastContainer/>);
     }
-
-
-    changeState (time) {
-      const t = time ? time : 4000;
-
-      setTimeout(()=>{
-        this.setState({
-          isVisible:false
-        }, ()=>{console.log('state changes')});
-      }, t);
-    }
-
+    return null;
+  }
 
 }
 
@@ -65,4 +77,8 @@ const mapStateToProps = state => ({
   notification: getNotification(state)
 });
 
-export default connect(mapStateToProps, null)(Notification);
+const mapDispatchToProps = {
+  cleanNotification,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Notification);

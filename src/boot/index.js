@@ -7,7 +7,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reducers from '../app/store/reducers';
 
 import { loadState, saveState } from '../app/service/localStorage';
-import RouterContainer from "../app/router";
+import RouterContainer from "../router";
 
 
 

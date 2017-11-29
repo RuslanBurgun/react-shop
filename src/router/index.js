@@ -1,12 +1,12 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import Layout from "../containers/layout";
-import Phone from '../containers/phone';
-import Phones from '../containers/phones';
-import Basket from '../containers/basket';
+import Layout from "../app/containers/layout/index";
+import Phone from '../app/containers/phone/index';
+import Phones from '../app/containers/phones/index';
+import Basket from '../app/containers/basket/index';
 
-import  Notification from '../components/notification';
+import  Notification from '../app/components/notification/index';
 
 const RouterContainer = () => (
     <Router>

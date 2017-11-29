@@ -6,7 +6,7 @@ const categoriesUrl = 'http://www.mocky.io/v2/5a1bc7f82e00001b163c14ec';
 const phonesUrl = 'http://www.mocky.io/v2/5a1c1d8e2e00007a2f3c16a8';
 
 export const fetchPhones = async () => {
-     // throw new Error('Произошла ошибка в системе');
+       throw new Error('Произошла ошибка в системе');
   const { body } = await request.get(phonesUrl);
   return body.phones;
 };
